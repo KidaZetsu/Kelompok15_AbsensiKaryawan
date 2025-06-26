@@ -1,13 +1,13 @@
 <?php
 $page_title = "Data Karyawan";
-// Panggil header.php dari folder template
+
 include '../template/header.php';
 
-// koneksi.php sudah dipanggil di dalam header.php
+
 ?>
 
 <div class="container-fluid">
-    <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="d-  flex justify-content-between align-items-center mb-4">
         <h1 class="mt-4" data-aos="fade-right">Data Karyawan</h1>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambahModal"
             data-aos="fade-left">
@@ -183,6 +183,6 @@ include '../template/header.php';
     </div>
 </div>
 <?php
-// Panggil footer.php
+
 include '../template/footer.php';
 ?>

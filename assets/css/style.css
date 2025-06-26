@@ -1,14 +1,14 @@
-/* Menggunakan font yang lebih modern dari Google Fonts */
+
 body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Mengatur transisi halus untuk semua elemen */
+
 * {
     transition: all 0.3s ease-in-out;
 }
 
-/* Styling Sidebar */
+
 #wrapper {
     overflow-x: hidden;
 }
@@ -51,3 +51,17 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
         margin-left: -15rem;
     }
 }
+
+
+.report-table {
+    white-space: nowrap; 
+}
+.report-table th, .report-table td {
+    padding: 0.5rem !important;
+    vertical-align: middle;
+}
+.status-cell-H { background-color: #d1e7dd; }
+.status-cell-S { background-color: #fff3cd; }
+.status-cell-I { background-color: #cff4fc; }
+.status-cell-A { background-color: #f8d7da; }
+.status-cell-- { background-color: #f8f9fa; }

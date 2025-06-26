@@ -1,9 +1,8 @@
 <?php
-// Memanggil koneksi dan BASE_URL
+
 include_once __DIR__ . '/../koneksi.php'; 
 
-// Jika perlu session, bisa dimulai di sini
-// session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="id">
