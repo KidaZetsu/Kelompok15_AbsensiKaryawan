@@ -48,7 +48,7 @@ $tanggal_dipilih = isset($_GET['tanggal']) ? $_GET['tanggal'] : date('Y-m-d');
                             <tr>
                                 <td><?php echo htmlspecialchars($data['nama_lengkap']); ?></td>
                                 <td><?php echo htmlspecialchars($data['jabatan']); ?></td>
-                                <td><?php echo $data['waktu_masuk'] ? date('H:i:s', strtotime($data['git'])) : '-'; ?></td>
+                                <td><?php echo $data['waktu_masuk'] ? date('H:i:s', strtotime($data['waktu_masuk'])) : '-'; ?></td>
                                 <td><?php echo $data['waktu_keluar'] ? date('H:i:s', strtotime($data['waktu_keluar'])) : '-'; ?></td>
                                 <td class="text-center">
                                     <?php
