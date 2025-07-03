@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 26 Jun 2025 pada 04.53
+-- Waktu pembuatan: 03 Jul 2025 pada 04.15
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -56,7 +56,9 @@ CREATE TABLE `absensi` (
 
 INSERT INTO `absensi` (`id_absensi`, `id_karyawan`, `waktu_masuk`, `waktu_keluar`, `status_kehadiran`, `keterangan`) VALUES
 (1, 1, '2025-06-26 09:17:44', '2025-06-26 09:18:21', 'Hadir', 'Absen masuk via sistem'),
-(2, 2, '2025-06-26 04:47:47', NULL, 'Izin', 'Sedang Perform Acara World Tour');
+(2, 2, '2025-06-26 04:47:47', NULL, 'Izin', 'Sedang Perform Acara World Tour'),
+(3, 2, '2025-07-03 07:37:24', '2025-07-03 07:38:17', 'Hadir', 'Absen masuk via sistem'),
+(4, 1, '2025-07-03 07:40:16', '2025-07-03 07:51:19', 'Hadir', 'Absen masuk via sistem');
 
 -- --------------------------------------------------------
 
@@ -79,7 +81,11 @@ CREATE TABLE `karyawan` (
 
 INSERT INTO `karyawan` (`id_karyawan`, `nik`, `nama_lengkap`, `jabatan`, `nomor_telepon`, `foto`) VALUES
 (1, '2455301073', 'Gede Abhita', 'Manajer', '088278904304', 'default.png'),
-(2, '245536969', 'Rusdiman Baik Budiman', 'Supporter', '088269696', '1750906002_download.jpg');
+(2, '2455352352', 'Rusdiman Baik Budiman', 'Supporter', '088254353', '1750906002_download.jpg'),
+(3, '2455301043', 'David Geraldo Joshua Siagian ', 'Editor', '088279543042', 'default.png'),
+(4, '2455301031', 'Arkan Fawwaz Safii', 'HRD', '088243932052', 'default.png'),
+(5, '2455301091', 'M Arif Pratama', 'Kasir', '088255374429', '1751508795_Screenshot 2025-07-03 091306.png'),
+(6, '245530123012', 'Muhammad Dzaki Farizan', 'Supplier', '088243243242', '1751508763_Screenshot 2025-07-03 091231.png');
 
 -- --------------------------------------------------------
 
@@ -135,13 +141,13 @@ ALTER TABLE `karyawan`
 -- AUTO_INCREMENT untuk tabel `absensi`
 --
 ALTER TABLE `absensi`
-  MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `karyawan`
 --
 ALTER TABLE `karyawan`
-  MODIFY `id_karyawan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_karyawan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
