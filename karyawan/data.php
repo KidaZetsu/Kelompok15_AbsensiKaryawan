@@ -15,6 +15,19 @@ include '../template/header.php';
         </button>
     </div>
 
+    <div class="card shadow-sm mb-4" data-aos="fade-up">
+        <div class="card-body">
+            <form method="GET" action="data.php">
+                <div class="input-group">
+                    <input type="text" name="search" class="form-control"
+                        placeholder="Cari karyawan berdasarkan nama..."
+                        value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
+                    <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i> Cari</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <div class="card shadow-sm" data-aos="fade-up" data-aos-delay="200">
         <div class="card-body">
             <div class="table-responsive">
@@ -32,7 +45,21 @@ include '../template/header.php';
                     </thead>
                     <tbody>
                         <?php
-                        $query = "SELECT * FROM karyawan ORDER BY nama_lengkap ASC";
+                        
+                        
+                        
+                        $search = isset($_GET['search']) ? mysqli_real_escape_string($koneksi, $_GET['search']) : '';
+
+                        
+                        $query = "SELECT * FROM karyawan";
+
+                       
+                        if (!empty($search)) {
+                            $query .= " WHERE nama_lengkap LIKE '%$search%'";
+                        }
+
+                        
+                        $query .= " ORDER BY nama_lengkap ASC";
                         $result = mysqli_query($koneksi, $query);
                         $no = 1;
 

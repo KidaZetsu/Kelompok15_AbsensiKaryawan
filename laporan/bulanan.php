@@ -25,7 +25,7 @@ $result_laporan = mysqli_query($koneksi, $query_laporan);
 
 $data_absensi = [];
 while($row = mysqli_fetch_assoc($result_laporan)) {
-    $tanggal = date('j', strtotime($row['waktu_masuk'])); // Ambil tanggalnya saja (angka 1-31)
+    $tanggal = date('j', strtotime($row['waktu_masuk'])); 
     $data_absensi[$row['id_karyawan']][$tanggal] = $row['status_kehadiran'];
 }
 
